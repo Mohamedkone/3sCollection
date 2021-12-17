@@ -1,0 +1,32 @@
+.sec1,
+.sec2 {
+  min-height: 900px;
+}
+.sec1 {
+  background: #000;
+  color: #fff;
+  padding: 30px 10px;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+}
+.sec2 {
+  background: #333;
+  color: #ccc;
+  padding: 30px 10px;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+}
+h1 {
+  font-size: 50px;
+}
+.container1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.promotion {
+  min-height: 800px;
+  background-image: url(../assets/boku.jpg);
+  background-size: cover;
+  background-position-y: -160px;
+}
