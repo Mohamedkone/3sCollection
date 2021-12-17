@@ -11,7 +11,7 @@ header {
   align-items: center;
 }
 
-nav {
+.top-nav {
   display: grid;
   grid-template-columns: 2fr 1fr;
   width: 80%;
