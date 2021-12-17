@@ -1,4 +1,4 @@
-import './App.css';
+import './style/App.css';
 import React from 'react';
 import { Route, Switch } from 'react-router-dom'
 import Home from "./components/Home"
@@ -15,7 +15,15 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Route path="/" render={Home} />
+      <Home />
+      {/* <Route path="/Community" component={Community} />
+      <Route path="/Fan_art" component={Fan_art}/>
+      <Route path="/Manwha" component={Manhwa}/>
+      <Route path="/Manga" component={Manga}/>
+      <Route path="/Profile" component={Profile}/>
+      <Route path="/Read" component={Read}/> */}
+
+      
       <Footer />
     </div>
   );
