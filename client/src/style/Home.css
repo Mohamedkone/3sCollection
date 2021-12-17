@@ -23,7 +23,42 @@ h1 {
   display: flex;
   justify-content: space-around;
 }
-
+.card {
+    position: relative;
+    height: 450px;
+    width: 356px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px #eee;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .card img {
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
+  }
+  .card-info {
+    border-radius: 0px 0px 15px 15px;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .card-desc {
+    opacity: 0;
+  }
+  .card:hover > .card-info {
+    height: 50%;
+  }
+  .card-info:hover > .card-desc {
+    opacity: 100%;
+  }
 .promotion {
   min-height: 800px;
   background-image: url(../assets/boku.jpg);
