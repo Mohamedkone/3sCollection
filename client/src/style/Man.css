@@ -1,0 +1,21 @@
+.manga{
+    min-height: 900px ;
+    width: 70vw;
+    margin: auto;
+    background: #000;
+    padding: 20px 50px;
+}
+.manga-card {
+  color: #fff;
+}
+.title{
+    text-align: start;
+    color: #fff;
+}
+.boxe{
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 40px ;
+}
+

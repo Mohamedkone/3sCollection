@@ -167,8 +167,224 @@ const Home = () =>{
                     </div>
                 </div>
             </section>
-            <section className="sec1 Manga"></section>
-            <section className="sec2 Manhwa"></section>
+            <section className="sec1 Manga"><h1>Manga Suggestions</h1>
+                <div className="container4">
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+            
+            </section>
+            <section className="sec2 Manhwa"><h1>Manhwa Suggestions</h1>
+                <div className="container4">
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="manga-card">
+                        <img src={Thumbnail} alt="" />
+                        <div className="card-info">
+                            <h3>Lorem, ipsum.</h3>
+                            <h4 className="author">Lorem, ipsum.</h4>
+                            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Sunt nesciunt fuga molestias corporis 
+                                fugit culpa obcaecati nobis voluptate 
+                                earum voluptatibus!
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+            
+            </section>
         </main>
     )
 }

@@ -45,7 +45,7 @@ const Nav = () =>{
                     <li>Fan Art</li>
                     <li>Community</li>
                 </ul>
-                <div className="search"><input type="text" /></div>
+                <div className="search"><input type="text" placeholder="Search..." /></div>
             </nav>
         </header>
     

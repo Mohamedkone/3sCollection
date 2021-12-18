@@ -1,6 +1,6 @@
 import './style/App.css';
 import React from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from "./components/Home"
 import Nav from "./components/Nav"
 import Footer from "./components/Footer"
@@ -15,14 +15,17 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Home />
-      {/* <Route path="/Community" component={Community} />
-      <Route path="/Fan_art" component={Fan_art}/>
-      <Route path="/Manwha" component={Manhwa}/>
-      <Route path="/Manga" component={Manga}/>
-      <Route path="/Profile" component={Profile}/>
-      <Route path="/Read" component={Read}/> */}
-
+      <BrowserRouter>
+      <Routes>
+      <Route  path="/" element={<Home />} />
+      <Route path="/Community" element={<Community />} />
+      <Route path="/Fan_art" element={<Fan_art />}/>
+      <Route path="/Manwha" element={<Manhwa />}/>
+      <Route path="/Manga" element={<Manga />}/>
+      <Route path="/Profile" element={<Profile />}/>
+      <Route path="/Read" element={<Read />}/>
+      </Routes>
+      </BrowserRouter>
       
       <Footer />
     </div>
