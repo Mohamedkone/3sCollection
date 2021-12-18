@@ -2,6 +2,33 @@
   background: #000;
   width: 100vw;
 }
+
+.searchSec{
+    background: #aaa;
+    width: 500px;
+    margin: auto;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.searchSec input{
+    min-height: 20%;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+.genres{
+    min-height: 80%;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: ;
+}
+
+
+
+
 .changePage {
   display: flex;
   justify-content: space-around;
@@ -42,6 +69,7 @@
     margin: 20px auto;
     position: relative;
     border-radius: 20px;
+    cursor: pointer;
 }
 .fan-card img{
     position: absolute;
@@ -52,7 +80,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
-
+    
 }
 .fan-info{
     position: absolute;

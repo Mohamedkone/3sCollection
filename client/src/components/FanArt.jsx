@@ -16,6 +16,16 @@ const Fan_art = () =>{
 
     return (
         <div className="artPage">
+            <div className="searchSec">
+                <input type="text" placeholder="Search for genres here..."/>
+                <div className="genres">
+                    <span className="genre1">Pixel Art</span>
+                    <span className="genre2">Cosplay</span>
+                    <span className="genre3">Fantasy</span>
+                    <span className="genre4">Digital Art</span>
+                    <span className="genre5">Sci-fi</span>
+                </div>
+            </div>
             <div className="changePage">
                 <button className="page">Previous</button>
                 <div className="pageN">1 2 3 ...</div>
@@ -23,6 +33,11 @@ const Fan_art = () =>{
             </div>
             <div className="fanContainer">
                 {fanCard}
+            </div>
+            <div className="changePage">
+                <button className="page">Previous</button>
+                <div className="pageN">1 2 3 ...</div>
+                <button className="page">Next</button>
             </div>
         </div>
     )
