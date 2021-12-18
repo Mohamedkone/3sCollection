@@ -1,3 +1,27 @@
-body {
+.artPage {
   background: #000;
+  width: 100vw;
+}
+.changePage {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: auto;
+  padding-top: 100px;
+  align-items: center;
+}
+.pageN {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.page {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #fff;
+  background: #4b6afb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
