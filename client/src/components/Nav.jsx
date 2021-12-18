@@ -12,7 +12,7 @@ const Nav = () =>{
     let [i, setI] = useState(0)
 
     const Mode = () =>{
-        if (i==1){
+        if (i===1){
            
             setShift(Light)
             setI(0)
