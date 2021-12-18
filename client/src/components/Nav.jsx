@@ -4,6 +4,8 @@ import { useState } from "react";
 import "../style/Nav.css"
 import Light from "../assets/light_shift.svg"
 import Night from "../assets/night_shift.svg"
+import { Link } from "react-router-dom";
+
 
 const Nav = () =>{
     const [shift, setShift] = useState(Light)
@@ -27,11 +29,15 @@ const Nav = () =>{
         <header>
             <div className="top">
                 <div className="toggle">
+                    
                    <img onClick={Mode} src={shift} alt="" />
 
                 </div>
                 <div className="logo">
-                    <img src={Logo} alt="" />
+                <Link to="/">
+                <img src={Logo} alt="" />
+                </Link>
+                    
                 </div>
                 <div className="userLog">
                     <button>Log In</button>
@@ -40,10 +46,10 @@ const Nav = () =>{
             </div>
             <nav className="top-nav">
                 <ul>
-                    <li>Manga</li>
-                    <li>Manwha</li>
-                    <li>Fan Art</li>
-                    <li>Community</li>
+                    <Link to= '/Manga'><li>Manga</li></Link>
+                    <Link to= '/Manhwa'><li>Manwha</li></Link>
+                    <Link to= '/Fan_Art'><li>Fan Art</li></Link>
+                    <Link to= '/Community'><li>Community</li></Link>
                 </ul>
                 <div className="search"><input type="text" placeholder="Search..." /></div>
             </nav>

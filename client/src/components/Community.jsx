@@ -1,7 +1,7 @@
 import React from "react";
 
 const Community = () =>{
-    return
+    return  <p>prog</p>
 }
 
 export default Community

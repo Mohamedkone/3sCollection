@@ -2,7 +2,8 @@
   min-height: 800px;
   background-image: url(../assets/boku.jpg);
   background-size: cover;
-  background-position-y: -160px;
+  background-position-y: -100px;
+  background-repeat: no-repeat;
 }
 .sec1,
 .sec2 {

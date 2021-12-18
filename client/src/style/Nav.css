@@ -33,6 +33,10 @@ input {
   outline: none;
   font-weight: bolder;
 }
+a {
+  color: #fff;
+  text-decoration: none;
+}
 
 li {
   padding: 20px;
@@ -41,5 +45,5 @@ li {
 li:hover {
   background: #fff;
   color: #000;
-  transition: .2s linear;
+  transition: 0.2s linear;
 }
