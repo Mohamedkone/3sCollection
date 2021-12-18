@@ -7,7 +7,7 @@ const Fan_art = () =>{
     for(let i = 0; i<20; i++){
         fanCard.push(<div className="fan-card">
             <img src={Thumbnail} alt="" />
-            <div className="card-info">
+            <div className="fan-info">
                 <h3>Lorem, ipsum.</h3>
                 <h4 className="author">Lorem, ipsum.</h4>
             </div>
@@ -22,7 +22,7 @@ const Fan_art = () =>{
                 <div className="pageN">1 2 3 ...</div>
                 <button className="page">Next</button>
             </div>
-            <div className="fanConatiner">
+            <div className="fanContainer">
                 {fanCard}
             </div>
         </div>
