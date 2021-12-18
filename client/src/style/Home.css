@@ -55,7 +55,7 @@ h1 {
   left: 0;
   right: 0;
   height: 20%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   font-weight: bolder;
   transition: 2 linear;
 }
