@@ -8,8 +8,7 @@ const Fan_art = () =>{
         fanCard.push(<div className="fan-card">
             <img src={Thumbnail} alt="" />
             <div className="fan-info">
-                <h3>Lorem, ipsum.</h3>
-                <h4 className="author">Lorem, ipsum.</h4>
+                <h5 className="author">by: DocxDiablo</h5>
             </div>
         </div>)
     }
