@@ -1,7 +1,10 @@
 import React from "react";
+import "../style/Community.css"
 
 const Community = () =>{
-    return  <p>prog</p>
+    return  <div className="comingSoon">
+        <h1>Coming Soon...</h1>
+    </div>
 }
 
 export default Community

@@ -1,6 +1,6 @@
 .artPage {
   background: #000;
-  width: 100vw;
+    padding-top: 50px;
 }
 
 .searchSec{
@@ -23,7 +23,6 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    justify-content: ;
 }
 span{
     margin: auto 10px;
