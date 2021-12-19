@@ -1,5 +1,5 @@
 import './style/App.css';
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from "./components/Home"
 import Nav from "./components/Nav"
@@ -10,8 +10,12 @@ import Manhwa from "./components/Manhwa"
 import Manga from "./components/Manga"
 import Profile from "./components/Profile"
 import Read from "./components/Read"
+import Genres from './components/Genres';
 
 function App() {
+
+  
+
   return (
     <div className="App">
       
@@ -26,6 +30,7 @@ function App() {
       <Route path="/Manga" element={<Manga />}/>
       <Route path="/Profile" element={<Profile />}/>
       <Route path="/Read" element={<Read />}/>
+      <Route path="/Genre" element={<Genres />}/>
       </Routes>
       <Footer />
       </BrowserRouter>
