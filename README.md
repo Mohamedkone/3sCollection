@@ -12,10 +12,12 @@ Manga Reader
 ***
 
 ### ***Technology Used***
-* Technology 1
-* Technology 2
+* React
+* MongoDB
   * Sub-Technology
-* Technology 4
+* Node
+* Adobe XD
+* Insomnia
 
 ### ***Getting Started***
 
