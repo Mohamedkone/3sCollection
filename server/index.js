@@ -9,9 +9,13 @@ const app = express()
 
 app.use('/post', postRoutes)
 
-app.use(bodyParser.json({ limit: "30mb", extended: true}))
-app.use(bodyParser.urlencoded({ limit: "30mb", extended: true}))
 app.use(cors())
+app.use(express.json())
+app.use('/', routes)
+app.use('*', (req, res) => res.status(404).json({error: "not found"}))
+
+
+export default app
 
 const CONNECTION_URL = 'mongodb+srv://Mohamedk:Luffy1999@cluster0.nlrdw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const PORT =  process.env.PORT || 3001
