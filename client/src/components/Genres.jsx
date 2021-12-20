@@ -25,9 +25,9 @@ const Genres = () =>{
         boxCard.push(<div key={i-1} className="manga-card">
             <img src={Thumbnail} alt="" key={i}/>
             <div className="card-info">
-                <h3 key={i+1}></h3>
-                <h4 key={i+2} className="author">{List[i].name}</h4>
-                <p key={i+3} className="card-desc">Lorem ipsum dolor sit amet, 
+                <h3></h3>
+                <h4 className="author">{List[i].name}</h4>
+                <p className="card-desc">Lorem ipsum dolor sit amet, 
                     consectetur adipisicing elit. 
                     Sunt nesciunt fuga molestias corporis 
                     fugit culpa obcaecati nobis voluptate 

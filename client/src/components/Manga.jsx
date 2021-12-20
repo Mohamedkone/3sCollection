@@ -21,9 +21,9 @@ const Manga = () =>{
         boxCard.push(<div key={i-1} className="manga-card">
         <img src={require(`../${List[i].thumbnail}`)} alt="" key={i}/>
         <div className="card-info">
-            <h3 key={i+1}>{List[i].name}</h3>
-            <h4 key={i+2} className="author">{List[i].creator}</h4>
-            <p key={i+3} className="card-desc">{List[i].synopsis}
+            <h3>{List[i].name}</h3>
+            <h4 className="author">{List[i].creator}</h4>
+            <p className="card-desc">{List[i].synopsis}
             </p>
         </div>
     </div>)

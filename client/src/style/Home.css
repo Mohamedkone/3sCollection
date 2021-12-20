@@ -59,13 +59,7 @@ h1 {
 .card-desc {
   opacity: 0;
 }
-.card:hover > .card-info {
-  height: 50%;
-  transition: 0.2 linear;
-}
-.card-info:hover > .card-desc {
-  opacity: 100%;
-}
+
 
 .container2 {
   display: flex;

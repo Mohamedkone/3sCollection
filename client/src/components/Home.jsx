@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
 import "../style/Home.css"
 import Thumbnail from "../assets/kimetsu.jpg"
 import Miyazaki from "../assets/miyazaki.jpg"
@@ -6,95 +7,59 @@ import Oda from "../assets/oda.jpg"
 import Takehiro from "../assets/takehiro.jpg"
 
 const Home = () =>{
+
+    const [dep, Setdep] = useState("")
+    const [List, SetList] = useState()
+    const [nbrGenre, SetNbr] = useState()
+
+        useEffect(()=>{
+        axios.get('http://localhost:3001/').then(res =>{
+          SetList(res.data)
+          SetNbr(3)        
+        })
+    },[])
+    
+    let boxCard = []
+    for(let i = 0; i<nbrGenre; i++){
+        boxCard.push(<div key={i-1} className="card">
+        <img src={Thumbnail} alt="" />
+        <div className="card-info">
+            <h3>{List[i].title}</h3>
+            <h4 className="author series">{List[i].manga}</h4>
+        </div>
+    </div>)
+    }
+
+    let boxCard2 = []
+    for(let i = 0; i<nbrGenre; i++){
+        boxCard2.push(<div key={i-1} className="card">
+        <img src={Thumbnail} alt="" />
+        <div className="card-info">
+            <h3>Lorem, ipsum.</h3>
+            <h4 className="author">Lorem, ipsum.</h4>
+            <p className="card-desc">Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. 
+                Sunt nesciunt fuga molestias corporis 
+                fugit culpa obcaecati nobis voluptate 
+                earum voluptatibus!
+            </p>
+        </div>
+    </div>)
+    }
+
     return (
         <main>
             <section className="promotion"></section>
             <section className="sec1 updates">
                 <h1>Updated ...</h1>
                 <div className="container1">
-                    <div className="card">
-                        <img src={Thumbnail} alt="" />
-                        <div className="card-info">
-                            <h3>Lorem, ipsum.</h3>
-                            <h4 className="author">Lorem, ipsum.</h4>
-                            <p className="card-desc">Lorem ipsum dolor sit amet, 
-                                consectetur adipisicing elit. 
-                                Sunt nesciunt fuga molestias corporis 
-                                fugit culpa obcaecati nobis voluptate 
-                                earum voluptatibus!
-                            </p>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img src={Thumbnail} alt="" />
-                        <div className="card-info">
-                            <h3>Lorem, ipsum.</h3>
-                            <h4 className="author">Lorem, ipsum.</h4>
-                            <p className="card-desc">Lorem ipsum dolor sit amet, 
-                                consectetur adipisicing elit. 
-                                Sunt nesciunt fuga molestias corporis 
-                                fugit culpa obcaecati nobis voluptate 
-                                earum voluptatibus!
-                            </p>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img src={Thumbnail} alt="" />
-                        <div className="card-info">
-                            <h3>Lorem, ipsum.</h3>
-                            <h4 className="author">Lorem, ipsum.</h4>
-                            <p className="card-desc">Lorem ipsum dolor sit amet, 
-                                consectetur adipisicing elit. 
-                                Sunt nesciunt fuga molestias corporis 
-                                fugit culpa obcaecati nobis voluptate 
-                                earum voluptatibus!
-                            </p>
-                        </div>
-                    </div>
+                    {boxCard}
                 </div>
             </section>
             <section className="sec2 suggestions">
                 <h1>Suggestions</h1>
                 <div className="container1">
-                    <div className="card">
-                        <img src={Thumbnail} alt="" />
-                        <div className="card-info">
-                            <h3>Lorem, ipsum.</h3>
-                            <h4 className="author">Lorem, ipsum.</h4>
-                            <p className="card-desc">Lorem ipsum dolor sit amet, 
-                                consectetur adipisicing elit. 
-                                Sunt nesciunt fuga molestias corporis 
-                                fugit culpa obcaecati nobis voluptate 
-                                earum voluptatibus!
-                            </p>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img src={Thumbnail} alt="" />
-                        <div className="card-info">
-                            <h3>Lorem, ipsum.</h3>
-                            <h4 className="author">Lorem, ipsum.</h4>
-                            <p className="card-desc">Lorem ipsum dolor sit amet, 
-                                consectetur adipisicing elit. 
-                                Sunt nesciunt fuga molestias corporis 
-                                fugit culpa obcaecati nobis voluptate 
-                                earum voluptatibus!
-                            </p>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img src={Thumbnail} alt="" />
-                        <div className="card-info">
-                            <h3>Lorem, ipsum.</h3>
-                            <h4 className="author">Lorem, ipsum.</h4>
-                            <p className="card-desc">Lorem ipsum dolor sit amet, 
-                                consectetur adipisicing elit. 
-                                Sunt nesciunt fuga molestias corporis 
-                                fugit culpa obcaecati nobis voluptate 
-                                earum voluptatibus!
-                            </p>
-                        </div>
-                    </div>
+                    {boxCard2}
                 </div>
             </section>
             <section className="sec1 ranks">
