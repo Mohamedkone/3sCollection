@@ -1,4 +1,4 @@
-const {Type, MangaL, Chapter} = require('../models');
+const {Type, MangaL, Chapter, useCom} = require('../models');
 // const Db = require('../db')
 
 const type = async (req, res) => {
@@ -9,6 +9,7 @@ const type = async (req, res) => {
       return res.status(500).send(error.message);
     }
   };
+
 
   const mangaL = async (req, res) => {
     try {
@@ -44,11 +45,28 @@ const type = async (req, res) => {
     } catch (error) {
         return res.status(500).send(error.message);
     }
+  }
+
+
+const addComm = async (req, res) => {
+    try {
+        const comments = await new useCom(req.body)
+        await comments.save()
+        return res.status(201).json({
+            comments,
+        })
+    } catch (error) {
+        return res.status(500).json({ error: error.message })
+    }
 }
+
+
+
 
 module.exports = {
     type,
     mangaL,
     chapters,
-    mangaUpdate
+    mangaUpdate,
+    addComm
 }
