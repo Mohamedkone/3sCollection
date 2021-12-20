@@ -32,3 +32,22 @@
     -webkit-box-orient: vertical;
   
 }
+.lf{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding: 10px;
+}
+.lf img{
+    width: 20px;
+}
+.ls p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.ls span{
+    
+}

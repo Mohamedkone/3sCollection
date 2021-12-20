@@ -1,0 +1,9 @@
+.imgContainer{
+    padding: 50px;
+    width: 70%;
+    margin: auto
+}
+.scan img{
+    margin: 20px auto;
+    height: 99vh;
+}

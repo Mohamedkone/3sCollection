@@ -12,6 +12,7 @@ const type = async (req, res) => {
 
   const mangaL = async (req, res) => {
     try {
+      const {id} = req.params
       let manga = await MangaL.find()
       return res.status(200).json(manga);
     } catch (error) {
@@ -28,8 +29,26 @@ const type = async (req, res) => {
     }
   }
 
+  const mangaUpdate = async (req, res) => {
+    try {
+        const { id } = req.params;
+        await MangaL.findByIdAndUpdate(id, req.body, { new: true }, (err, MangaL) => {
+            if (err) {
+                res.status(500).send(err);
+            }
+            if (!MangaL) {
+                res.status(500).send('Manga not found!');
+            }
+            return res.status(200).json(MangaL);
+        })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
 module.exports = {
     type,
     mangaL,
-    chapters
+    chapters,
+    mangaUpdate
 }
