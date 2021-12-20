@@ -1,9 +1,57 @@
-.imgContainer{
-    padding: 50px;
-    width: 70%;
-    margin: auto
+.imgContainer {
+  padding: 50px;
+  width: 70%;
+  margin: auto;
 }
-.scan img{
-    margin: 20px auto;
-    height: 99vh;
+.scan img {
+  margin: 20px auto;
+  height: 99vh;
+}
+
+.com-section form {
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: 10px;
+  align-items: center;
+  margin: auto;
+  width: 50vw;
+  background: #fff;
+  padding: 20px;
+}
+.user-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+label{
+    font-size: 20px;
+    color: #000;
+    margin: auto ;
+}
+.com-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.show-com{
+    min-height: 500px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    text-align: start;
+    column-gap: 20px ;   
+}
+.userIName{
+    text-align: end;
+    font-size: 30px;
+}
+.com-bubble{
+    width: 50vw;
+    max-height: 200px;
+    border: none;
+    border-radius: 20px;
+    background: #666;
+    color: #fff;
+
+    padding: 5px 20px;
 }
