@@ -1,25 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Thumbnail from "../assets/kimetsu.jpg"
 import "../style/Man.css"
 
 const Manga = () =>{
+    const [dep, Setdep] = useState("")
+    const [List, SetList] = useState()
+    const [nbrGenre, SetNbr] = useState()
 
+        useEffect(()=>{
+        axios.get('http://localhost:3001/Manga').then(res =>{
+          SetList(res.data)
+          SetNbr(res.data.length)
+        
+        })
+    },[])
         let boxCard = []
-    for(let i = 0; i<20; i++){
-        boxCard.push(<div className="manga-card">
-            <img src={Thumbnail} alt="" />
-            <div className="card-info">
-                <h3>Lorem, ipsum.</h3>
-                <h4 className="author">Lorem, ipsum.</h4>
-                <p className="card-desc">Lorem ipsum dolor sit amet, 
-                    consectetur adipisicing elit. 
-                    Sunt nesciunt fuga molestias corporis 
-                    fugit culpa obcaecati nobis voluptate 
-                    earum voluptatibus!
-                </p>
-            </div>
-        </div>)
+        
+    for(let i = 0; i<nbrGenre; i++){
+        boxCard.push(<div key={i-1} className="manga-card">
+        <img src={require(`../${List[i].thumbnail}`)} alt="" key={i}/>
+        <div className="card-info">
+            <h3 key={i+1}>{List[i].name}</h3>
+            <h4 key={i+2} className="author">{List[i].creator}</h4>
+            <p key={i+3} className="card-desc">{List[i].synopsis}
+            </p>
+        </div>
+    </div>)
+    console.log(`../${List[1].thumbnail}`)
     }
+    
     return (
     <div className="manga">
         <div className="title">

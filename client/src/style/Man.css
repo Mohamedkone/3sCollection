@@ -1,28 +1,34 @@
-
-
-.manga{
-    min-height: 900px ;
-    width: 70vw;
-    margin: auto;
-    background: #000;
-    padding: 20px 50px;
+.manga {
+  min-height: 900px;
+  width: 70vw;
+  margin: auto;
+  background: #000;
+  padding: 20px 50px;
 }
 .manga-card {
   color: #fff;
 }
-.title{
-    text-align: start;
-    color: #fff;
+.title {
+  text-align: start;
+  color: #fff;
 }
-.boxe{
-    margin: 100px auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 40px ;
+.boxe {
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 40px;
 }
 
-.manga-card img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.manga-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-desc {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  
 }
