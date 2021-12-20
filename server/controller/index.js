@@ -69,6 +69,18 @@ const getComm = async (req, res) => {
   }
 };
 
+const delComm = async (req, res) => {
+  try {
+    const { id } = req.params
+    let deleted = await useCom.findByIdAndDelete(id);
+    if(deleted) {
+    return res.status(200).send("comments deleted");
+  }throw new Error("Plant not found")
+} 
+  catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
 
 module.exports = {
     type,
@@ -76,5 +88,6 @@ module.exports = {
     chapters,
     mangaUpdate,
     addComm,
-    getComm
+    getComm,
+    delComm
 }
