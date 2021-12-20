@@ -60,7 +60,14 @@ const addComm = async (req, res) => {
     }
 }
 
-
+const getComm = async (req, res) => {
+  try {
+    let comments = await useCom.find();
+    return res.status(200).json(comments);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
 
 
 module.exports = {
@@ -68,5 +75,6 @@ module.exports = {
     mangaL,
     chapters,
     mangaUpdate,
-    addComm
+    addComm,
+    getComm
 }
