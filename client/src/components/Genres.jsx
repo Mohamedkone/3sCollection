@@ -23,7 +23,7 @@ const Genres = () =>{
     for(let i = 0; i<nbrGenre; i++){
        
         boxCard.push(<div key={i-1} className="manga-card">
-            <img src={Thumbnail} alt="" key={i}/>
+            <img src={require(`../${List[i].thumbnail}`)} alt="" key={i}/>
             <div className="card-info">
                 <h3></h3>
                 <h4 className="author">{List[i].name}</h4>

@@ -1,0 +1,77 @@
+.imgContainer {
+  padding: 50px;
+  width: 70%;
+  margin: auto;
+}
+.scan img {
+  margin: 20px auto;
+  height: 99vh;
+}
+
+.com-section form {
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: 10px;
+  align-items: center;
+  margin: auto;
+  width: 50vw;
+  background: #fff;
+  padding: 20px;
+}
+.user-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+label{
+    font-size: 20px;
+    color: #000;
+    margin: auto ;
+}
+.com-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.show-com{
+    min-height: 500px;
+    background: #fff;
+    padding: 20px 50px;
+    display: grid;
+    row-gap: 20px;
+}
+.message{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    text-align: start;
+    column-gap: 20px ;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+}
+.userIName{
+    text-align: end;
+    font-size: 30px;
+    margin: auto 0;
+}
+.com-bubble{
+    max-width: 20vw ;
+    border: none;
+    border-radius: 20px;
+    background: #666;
+    color: #fff;
+    margin: auto 0;
+    
+    padding: 5px 20px;
+}
+.del{
+    font-size: 20px;
+    font-weight: bolder;
+    margin: auto;
+    padding: 20px 25px;
+    border-radius: 100%;
+    border:none;
+    color: #fff;
+    background: #e11;
+    cursor: pointer;
+    outline: none;
+}
