@@ -33,7 +33,7 @@ const type = async (req, res) => {
   const mangaUpdate = async (req, res) => {
     try {
         const { id } = req.params;
-        await MangaL.findByIdAndUpdate(id, req.body, { new: true }, (err, MangaL) => {
+        await MangaL.findByIdAndUpdate(id, {$inc:{ like:1 }}, { new: true }, (err, MangaL) => {
             if (err) {
                 res.status(500).send(err);
             }
@@ -76,7 +76,7 @@ const delComm = async (req, res) => {
     const { id } = req.params
     let deleted = await useCom.findByIdAndDelete(id);
     if(deleted) {
-    return res.status(200).send("comments deleted").red;
+    return res.status(200).send("comments deleted");
   }throw new Error("Plant not found")
 } 
   catch (error) {

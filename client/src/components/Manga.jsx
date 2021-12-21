@@ -19,10 +19,19 @@ const Manga = () =>{
         })
     },[])
 
+    async function upd(id) {
+        await axios.put(`http://localhost:3001/Manga/${id}`);
+        Setdep('Delete successful');
+        window.location.reload()
+     }
+     useEffect(()=>{},[upd])
+
         let boxCard = []
         
     for(let i = 0; i<nbrGenre; i++){
-        boxCard.push(<div className="inter"><Link to={"/Read"} key={i-1}><div  className="manga-card">
+        boxCard.push(<div className="inter">
+             <div className="lf"><p><img src={Like} alt="" onClick={()=>{upd(List[i]._id)}}/><span>{List[i].like}</span></p><p><img src={Fav} alt="" /><span>{List[i].favorites}</span></p></div>
+             <div  className="manga-card"><Link to={"/Read"} key={i-1}>
         <img src={require(`../${List[i].thumbnail}`)} alt="" key={i}/>
         <div className="card-info">
             <h3>{List[i].name}</h3>
@@ -30,9 +39,9 @@ const Manga = () =>{
             <p className="card-desc">{List[i].synopsis}
             </p>
         </div>
-    </div></Link>
-    <div className="lf"><p><img src={Like} alt="" /><span>{List[i].like}</span></p><p><img src={Fav} alt="" /><span>{List[i].favorites}</span></p></div>
-    </div>)
+        </Link>
+   
+    </div></div>)
     }
     
     return (

@@ -21,14 +21,12 @@ const Read = () =>{
                     
           })
         })
-        // useEffect(() => {
-        //     // DELETE request using axios with async/await
-        //     async function deletePost(ert) {
-        //        await axios.delete('http://localhost:3001/Read/61c0e81b4778dc5a2bb9c93a');
-        //        Setdel('Delete successful');
-        //     }
-         
-        //  }, []);
+        async function deletePost(id) {
+            await axios.delete(`http://localhost:3001/Read/${id}`);
+            Setdel('Delete successful');
+            window.location.reload()
+         }
+         useEffect(()=>{},[deletePost])
     
         let comms = []
     for(let i = 0; i<nbrGenre; i++){
@@ -38,7 +36,9 @@ const Read = () =>{
                 <div className="useICom">{List[i].message}</div>
         </div>
         
-        <button className="del" >X</button>
+        <button className="del" onClick={() =>{
+            deletePost(List[i]._id)
+        }}>X</button>
         </div>
             
         )
