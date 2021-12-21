@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const { add } = require('./type')
 const Schema = mongoose.Schema
 
 const MangaChp = new Schema(

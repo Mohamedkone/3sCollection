@@ -7,4 +7,8 @@ router.get('/', controllers.chapters, controllers.mangaL)
 router.get('/type', controllers.type)
 router.get('/Manga', controllers.mangaL)
 router.put('/Manga/:id', controllers.mangaUpdate)
+router.post('/Read/comments', controllers.addComm)
+router.get('/Read', controllers.getComm)
+router.delete('/Read/:id', controllers.delComm)
+
 module.exports = router
