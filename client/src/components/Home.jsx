@@ -56,11 +56,25 @@ const Home = () =>{
         boxCard3.push(<div key={i-1} className={`art-card art${j+1}`}>
         <img src={require(`../${Info[0][i].path}`)} alt="" />
         <div className="card-info">
-            <h3>Lorem, ipsum.</h3>
-            <h4 className="author">Lorem, ipsum.</h4>
+            <h3>{Info[0][i].title}</h3>
+            <h4 className="author">{Info[0][i].creator}</h4>
         </div>
     </div>)
     j++
+    }
+    let boxCard4 = []
+    for(let i = 0; i<nbrMng; i++){
+        boxCard4.push(<div  className="manga-card"><Link to={"/Read"} key={i-1}>
+        <img src={require(`../${Info[1][i].thumbnail}`)} alt="" key={i}/>
+        <div className="card-info">
+        <h3>{Info[1][i].name}</h3>
+        <h4 className="author">{Info[1][i].creator}</h4>
+        <p className="card-desc">{Info[1][i].synopsis}
+        </p>
+    </div>
+    </Link>
+
+</div>)
     }
 
     return (
