@@ -75,3 +75,17 @@ label{
     cursor: pointer;
     outline: none;
 }
+
+form button{
+    margin: auto;
+    padding: .7rem;
+    font-size: 1.3em;
+    font-weight: bolder;
+    background: none;
+    border: 5px solid#000;
+    cursor: pointer;
+}
+form button:hover{
+    color: #fff;
+    background: #000;
+}
