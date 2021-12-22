@@ -64,6 +64,10 @@ h1 {
 .container2 {
   display: flex;
 }
+.suggest{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 .bubble {
   margin: auto;
   position: relative;

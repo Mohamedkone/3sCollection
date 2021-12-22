@@ -32,8 +32,8 @@ const Manga = () =>{
         boxCard.push(<div className="inter">
              <div className="lf"><p><img src={Like} alt="" onClick={()=>{upd(List[i]._id)}}/><span>{List[i].like}</span></p><p><img src={Fav} alt="" /><span>{List[i].favorites}</span></p></div>
              <div  className="manga-card"><Link to={"/Read"} key={i-1}>
-        <img src={require(`../${List[i].thumbnail}`)} alt="" key={i}/>
-        <div className="card-info">
+            <img src={require(`../${List[i].thumbnail}`)} alt="" key={i}/>
+            <div className="card-info">
             <h3>{List[i].name}</h3>
             <h4 className="author">{List[i].creator}</h4>
             <p className="card-desc">{List[i].synopsis}

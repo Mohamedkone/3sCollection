@@ -5,60 +5,76 @@ import Thumbnail from "../assets/kimetsu.jpg"
 import Miyazaki from "../assets/miyazaki.jpg"
 import Oda from "../assets/oda.jpg"
 import Takehiro from "../assets/takehiro.jpg"
+import { Link } from "react-router-dom";
 
 const Home = () =>{
 
-    const [dep, Setdep] = useState("")
-    const [List, SetList] = useState()
-    const [nbrGenre, SetNbr] = useState()
+    const [Chapters, SetChapter] = useState("")
+    const [Info, SetInfo] = useState()
+    const [nbrChp, SetNbrChp] = useState()
+    const [nbrMng, SetNbrMng] = useState()
+    const [nbrArt, SetNbrArt] = useState()
 
         useEffect(()=>{
         axios.get('http://localhost:3001/').then(res =>{
-          SetList(res.data)
-          SetNbr(3)        
+          SetInfo(res.data)
+          SetNbrChp(3)
+          SetNbrMng(6)
+          SetNbrArt(6)
         })
     },[])
     
     let boxCard = []
-    for(let i = 0; i<nbrGenre; i++){
+    for(let i = 0; i<nbrChp; i++){
         boxCard.push(<div key={i-1} className="card">
         <img src={Thumbnail} alt="" />
         <div className="card-info">
-            <h3>{List[i].title}</h3>
-            <h4 className="author series">{List[i].manga}</h4>
+            <h3>{Info[2][i].title}</h3>
+            <h4 className="author series">Chapter {Info[2][i].chp_nb}</h4>
         </div>
     </div>)
     }
 
     let boxCard2 = []
-    for(let i = 0; i<nbrGenre; i++){
-        boxCard2.push(<div key={i-1} className="card">
-        <img src={Thumbnail} alt="" />
+    for(let i = 0; i<nbrMng; i++){
+        boxCard2.push(<div  className="manga-card"><Link to={"/Read"} key={i-1}>
+        <img src={require(`../${Info[1][i].thumbnail}`)} alt="" key={i}/>
+        <div className="card-info">
+        <h3>{Info[1][i].name}</h3>
+        <h4 className="author">{Info[1][i].creator}</h4>
+        <p className="card-desc">{Info[1][i].synopsis}
+        </p>
+    </div>
+    </Link>
+
+</div>)
+    }
+
+    let boxCard3 = []
+    let j = 0
+    for(let i = 2; i<nbrArt+2; i++){
+        boxCard3.push(<div key={i-1} className={`art-card art${j+1}`}>
+        <img src={require(`../${Info[0][i].path}`)} alt="" />
         <div className="card-info">
             <h3>Lorem, ipsum.</h3>
             <h4 className="author">Lorem, ipsum.</h4>
-            <p className="card-desc">Lorem ipsum dolor sit amet, 
-                consectetur adipisicing elit. 
-                Sunt nesciunt fuga molestias corporis 
-                fugit culpa obcaecati nobis voluptate 
-                earum voluptatibus!
-            </p>
         </div>
     </div>)
+    j++
     }
 
     return (
         <main>
             <section className="promotion"></section>
             <section className="sec1 updates">
-                <h1>Updated ...</h1>
+                <h1>Recent Updates...</h1>
                 <div className="container1">
                     {boxCard}
                 </div>
             </section>
             <section className="sec2 suggestions">
                 <h1>Suggestions</h1>
-                <div className="container1">
+                <div className="container1 suggest">
                     {boxCard2}
                 </div>
             </section>
@@ -86,50 +102,7 @@ const Home = () =>{
             <section className="sec2 fanArt">
                 <h1>Fan Art</h1>
                 <div className="container3">
-                    <div className="art-card art1">
-                        <img src={Thumbnail} alt="" />
-                        <div className="card-info">
-                            <h3>Lorem, ipsum.</h3>
-                            <h4 className="author">Lorem, ipsum.</h4>
-                        </div>
-                    </div>
-                    <div className="art-card art2">
-                        <img src={Thumbnail} alt="" />
-                        <div className="card-info">
-                            <h3>Lorem, ipsum.</h3>
-                            <h4 className="author">Lorem, ipsum.</h4>
-                        </div>
-                    </div>
-                    <div className="art-card art3">
-                        <img src={Thumbnail} alt="" />
-                        <div className="card-info">
-                            <h3>Lorem, ipsum.</h3>
-                            <h4 className="author">Lorem, ipsum.</h4>
-                        </div>
-                    </div>
-                    <div className="third">
-                    <div className="art-card art4">
-                        <img src={Thumbnail} alt="" />
-                        <div className="card-info">
-                            <h3>Lorem, ipsum.</h3>
-                            <h4 className="author">Lorem, ipsum.</h4>
-                        </div>
-                    </div><div className="art-card art5">
-                        <img src={Thumbnail} alt="" />
-                        <div className="card-info">
-                            <h3>Lorem, ipsum.</h3>
-                            <h4 className="author">Lorem, ipsum.</h4>
-                        </div>
-                    </div>
-                    <div className="art-card art6">
-                        <img src={Thumbnail} alt="" />
-                        <div className="card-info">
-                            <h3>Lorem, ipsum.</h3>
-                            <h4 className="author">Lorem, ipsum.</h4>
-                            
-                        </div>
-                    </div>
-                    </div>
+                    {boxCard3}
                 </div>
             </section>
             <section className="sec1 Manga"><h1>Manga Suggestions</h1>

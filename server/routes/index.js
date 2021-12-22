@@ -3,7 +3,7 @@ const router = Router();
 // const dbCtrl = require("./controller")
 const controllers = require('../controller')
 
-router.get('/', controllers.chapters, controllers.mangaL)
+router.get('/', controllers.Home)
 router.get('/type', controllers.type)
 router.get('/Manga', controllers.mangaL)
 router.get('/Fan_Art', controllers.getArt)

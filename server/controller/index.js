@@ -9,6 +9,17 @@ const type = async (req, res) => {
       return res.status(500).send(error.message);
     }
   };
+  
+  const Home = async (req, res) => {
+    try {
+      let genre = await ArtCollection.find();
+      let manga = await MangaL.find()
+      let chapter = await Chapter.find()
+      return res.status(200).json([genre, manga, chapter]);
+    } catch (error) {
+      return res.status(500).send(error.message);
+    }
+  };
 
 
   const mangaL = async (req, res) => {
@@ -102,5 +113,6 @@ module.exports = {
     addComm,
     getComm,
     delComm,
-    getArt
+    getArt,
+    Home
 }
