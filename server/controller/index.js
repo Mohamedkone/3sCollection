@@ -65,11 +65,9 @@ const addComm = async (req, res) => {
     try {
         const comments = await new useCom(req.body)
         await comments.save()
-        return res.status(201).json({
-            comments,
-        })
+        return res.status(201)
     } catch (error) {
-        return res.status(500).json({ error: error.message })
+        return res.status(500)
     }
 }
 
@@ -88,7 +86,7 @@ const delComm = async (req, res) => {
     let deleted = await useCom.findByIdAndDelete(id);
     if(deleted) {
     return res.status(200).send("comments deleted");
-  }throw new Error("Plant not found")
+  }throw new Error("Comment not found")
 } 
   catch (error) {
     return res.status(500).send(error.message);

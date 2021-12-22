@@ -43,6 +43,8 @@ const Read = () =>{
             
         )
     }
+
+    
     
     
 
@@ -63,14 +65,14 @@ const Read = () =>{
             </div>
         </div>
         <div className="com-section">
-            <form method="POST">
+            <form method="POST" action="/Read">
                 <div className="user-info">
                 <label>Username</label>
                 <input type="text" name="username" className="username" />
                 </div>
                 <div className="com-info">
                     <label>Comments</label>
-                <textarea className="comments" name="comments" rows="4" cols="50" />
+                <textarea className="comments" name="message" rows="4" cols="50" />
                 </div>
                 <button>Submit Comments</button>
             </form>
