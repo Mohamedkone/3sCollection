@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from 'axios'
 import "../style/Fan.css"
 import Thumbnail from "../assets/kimetsu.jpg"
 const Fan_art = () =>{
-    
+    const [art, SetArt] = useState()
+    const [count, SetCount] = useState()
+    useEffect (()=>{
+        axios.get('http://localhost:3001/Fan_Art').then(res=>{
+            SetArt(res.data)
+            SetCount(res.data.length)
+        })
+    },[])
     let fanCard = []
-    for(let i = 0; i<20; i++){
-        fanCard.push(<div className="fan-card">
-            <img src={Thumbnail} alt="" />
+    for(let i = 0; i<count; i++){
+        fanCard.push(<div key={i-1} className="fan-card">
+            <img src={require(`../${art[i].path}`)} alt="" />
             <div className="fan-info">
-                <h5 className="author">by: DocxDiablo</h5>
+                <h5 className="author">{art[i].title}</h5>
+                <h6 className="author">by: {art[i].creator}</h6>
             </div>
         </div>)
     }

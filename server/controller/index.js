@@ -1,4 +1,4 @@
-const {Type, MangaL, Chapter, useCom} = require('../models');
+const {Type, MangaL, Chapter, useCom, ArtCollection} = require('../models');
 // const Db = require('../db')
 
 const type = async (req, res) => {
@@ -84,6 +84,16 @@ const delComm = async (req, res) => {
   }
 };
 
+const getArt = async(req, res) =>{
+  try {
+    let Art = await ArtCollection.find();
+    return res.status(200).json(Art);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+}
+
+
 module.exports = {
     type,
     mangaL,
@@ -91,5 +101,6 @@ module.exports = {
     mangaUpdate,
     addComm,
     getComm,
-    delComm
+    delComm,
+    getArt
 }

@@ -15,5 +15,6 @@ module.exports = {
     MangaL,
     Chapter,
     Type,
-    useCom
+    useCom,
+    ArtCollection
 }
