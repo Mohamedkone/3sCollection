@@ -1,44 +1,58 @@
 Manga Reader
+
 ## Date: 12/16/2021
+
 ### By: **Mohamed Kone**
 
 #### [GitHub](https://Github.com/Mohamedkone)|[Website](https://www.Mohamedkone.com)
 
-***
+---
 
-### ***Description***
+### **_Description_**
+
 #### A brief description of the project, what it's about, when and what you made it for, etc. ...
 
-***
+---
 
-### ***Technology Used***
-* React
-* MongoDB
-  * Sub-Technology
-* Node
-* Adobe XD
-* Insomnia
+### **_Technology Used_**
 
-### ***Getting Started***
+- React
+- MongoDB
+  - Mongo
+- Node
+- Adobe XD
+- Insomnia
+- Express
+-
+
+### **_Getting Started_**
 
 ##### Sign up and sign in as a new user and then walk through the Ranger creation page to begin your warband.
+
 ##### A Trello board was used to keep track of development progress and can be viewed [here](URL).
+
 ##### The project itself was deployed and can be viewed [here](URL).
-***
-### ***Screenshots***
 
-##### Image header 1
-![Eat](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.RA8kfJfbfqmqTObpCYDJmwHaFj%26pid%3DApi&f=1)
+---
 
-##### Image header 2
-![Eat](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Kb2--TLq1gtYjmDAjQj7XgHaE8%26pid%3DApi&f=1)
+### **_Screenshots_**
 
-### ***Future updates***
+##### Wireframe
 
-- [ ] Future update 1
-- [ ] Future update 2
-- [x] Completed update
-- [x] ~~Strikethrough~~ Items also
-***
+![Wireframe](./design/xd_files_svg/Web1920_2.svg)
 
-### ***Credits***
+##### Final
+
+![Final](./design/final.PNG)
+
+### **_Future updates_**
+
+- [ ] Log in/ Log out function
+- [ ] Community Page
+- [ ] Fan_art page Page change
+- [ ] Populate Manwha collection
+- [ ] Create Manga page with descriptions
+
+---
+
+### **_Credits_**
