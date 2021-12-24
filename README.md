@@ -10,7 +10,7 @@ Manga Reader
 
 ### **_Description_**
 
-#### A brief description of the project, what it's about, when and what you made it for, etc. ...
+#### 3s collection is a website where you can find a collection of manga and manhwa to read on your down times. At the same time users can upload their or see other users fan arts
 
 ---
 
@@ -23,15 +23,14 @@ Manga Reader
 - Adobe XD
 - Insomnia
 - Express
--
+- Git
 
 ### **_Getting Started_**
 
-##### Sign up and sign in as a new user and then walk through the Ranger creation page to begin your warband.
+##### Some functionnalities are still in the working (Search, Sign up/in, community page, light/dark Mode). For copyright issues only one real chapter is available on the website which is a one piece chapter.
+
 
 ##### A Trello board was used to keep track of development progress and can be viewed [here](URL).
-
-##### The project itself was deployed and can be viewed [here](URL).
 
 ---
 
@@ -56,3 +55,6 @@ Manga Reader
 ---
 
 ### **_Credits_**
+- Any Fan art on the website were made by Mohamed Kone
+- Any manga images and chapter available on the website are copyrighted by
+SHUEISHA and Shogakukan
