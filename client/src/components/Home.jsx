@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 
 const Home = () =>{
 
-    const [Chapters, SetChapter] = useState("")
     const [Info, SetInfo] = useState()
     const [nbrChp, SetNbrChp] = useState()
     const [nbrMng, SetNbrMng] = useState()

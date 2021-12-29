@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
 import "../style/Fan.css"
-import Thumbnail from "../assets/kimetsu.jpg"
 const Fan_art = () =>{
     const [art, SetArt] = useState()
     const [count, SetCount] = useState()

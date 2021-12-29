@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Thumbnail from "../assets/kimetsu.jpg"
 import Like from "../assets/like.png"
 import Fav from "../assets/star.png"
 import "../style/Man.css"
 import { Link } from "react-router-dom";
 
 const Manga = () =>{
-    const [dep, Setdep] = useState(0)
     const [List, SetList] = useState()
     const [nbrGenre, SetNbr] = useState()
 
@@ -21,10 +19,9 @@ const Manga = () =>{
 
     async function upd(id) {
         await axios.put(`http://localhost:3001/Manga/${id}`);
-        Setdep('Delete successful');
         window.location.reload()
      }
-     useEffect(()=>{},[upd])
+     useEffect(()=>{},[])
 
         let boxCard = []
         

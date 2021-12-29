@@ -4,7 +4,6 @@ import "../style/Read.css"
 const Read = () =>{
     const [List, SetList] = useState("")
     const [nbrGenre, SetNbr] = useState()
-    const [dele, Setdel] = useState()
     
     let listOfImages
    const importAll =(r)=> {
@@ -23,10 +22,9 @@ const Read = () =>{
         })
         async function deletePost(id) {
             await axios.delete(`http://localhost:3001/Read/${id}`);
-            Setdel('Delete successful');
             window.location.reload()
          }
-         useEffect(()=>{},[deletePost])
+         useEffect(()=>{},[])
     
         let comms = []
     for(let i = 0; i<nbrGenre; i++){

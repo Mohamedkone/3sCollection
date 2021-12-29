@@ -1,12 +1,10 @@
 import React, { useState, useEffect} from "react";
 import axios from "axios";
-import Thumbnail from "../assets/kimetsu.jpg"
 import "../style/Man.css"
 
 
 
 const Genres = () =>{
-    const [dep, Setdep] = useState("")
     const [List, SetList] = useState()
     const [nbrGenre, SetNbr] = useState()
 
@@ -25,8 +23,7 @@ const Genres = () =>{
         boxCard.push(<div key={i-1} className="manga-card">
             <img src={require(`../${List[i].thumbnail}`)} alt="" key={i}/>
             <div className="card-info">
-                <h3></h3>
-                <h4 className="author">{List[i].name}</h4>
+                <h3>{List[i].name}</h3>
                 <p className="card-desc">Lorem ipsum dolor sit amet, 
                     consectetur adipisicing elit. 
                     Sunt nesciunt fuga molestias corporis 
